@@ -65,7 +65,6 @@ const update = (printErrors = false) => {
             .get(server.url)
             .then((response) => {
             if (response.data &&
-                response.headers['content-type'].includes('text/plain') &&
                 (response.data.includes('C: ') ||
                     response.data.includes('c: '))) {
                 const index = response.data.indexOf('C: ') < 0
@@ -73,6 +72,8 @@ const update = (printErrors = false) => {
                     : response.data.indexOf('C: ');
                 const arr = response.data
                     .substr(index)
+                    .replace('\n', ' ')
+                    .replace('\r', ' ')
                     .split(' ')
                     .map((str) => str.trim());
                 const key = {
@@ -84,6 +85,7 @@ const update = (printErrors = false) => {
                 return axios_1.default
                     .get(`//${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save"`)
                     .catch((err) => {
+                    console.log(`Server: ${server.name}: ${err.code}`);
                     console.error(err);
                 });
             }

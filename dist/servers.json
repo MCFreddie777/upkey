@@ -121,10 +121,12 @@
   },
   {
 	"name": "HTTPSERV1",
+	"group": 2,
 	"url": "http://ia601509.us.archive.org/5/items/dreamosat/CCCAM.txt"
   },
   {
 	"name": "HTTPSERV24",
+	"group": 2,
 	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server1.txt"
   },
   {

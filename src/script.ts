@@ -104,21 +104,20 @@ const update = (printErrors: boolean = false) => {
                 .then((response) => {
                     if (
                         response.data &&
-                        response.headers['content-type'].includes(
-                            'text/plain'
-                        ) &&
                         (response.data.includes('C: ') ||
                             response.data.includes('c: '))
                     ) {
-                        // find the index of C/c:
+                        // Find the index of C/c:
                         const index =
                             response.data.indexOf('C: ') < 0
                                 ? response.data.indexOf('c: ')
                                 : response.data.indexOf('C: ');
 
-                        // create substring
+                        // Create substring
                         const arr = response.data
                             .substr(index)
+                            .replace('\n', ' ')
+                            .replace('\r', ' ')
                             .split(' ')
                             .map((str: string) => str.trim());
 
@@ -129,11 +128,15 @@ const update = (printErrors: boolean = false) => {
                             pass: arr[4],
                         };
 
+                        // Request to stb
                         return axios
                             .get(
                                 `//${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save"`
                             )
                             .catch((err) => {
+                                console.log(
+                                    `Server: ${server.name}: ${err.code}`
+                                );
                                 console.error(err);
                             });
                     }
