@@ -118,5 +118,183 @@
 	"name": "smartcccam.uk",
 	"group": 1,
 	"url": "http://www.smartcccam.uk/free%20cccam/index.html"
+  },
+  {
+	"name": "HTTPSERV1",
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/CCCAM.txt"
+  },
+  {
+	"name": "HTTPSERV24",
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server1.txt"
+  },
+  {
+	"name": "HTTPSERV25",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server2.txt"
+  },
+  {
+	"name": "HTTPSERV26",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server3.txt"
+  },
+  {
+	"name": "HTTPSERV27",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server4.txt"
+  },
+  {
+	"name": "HTTPSERV28",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server5.txt"
+  },
+  {
+	"name": "HTTPSERV29",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server6.txt"
+  },
+  {
+	"name": "HTTPSERV30",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server7.txt"
+  },
+  {
+	"name": "HTTPSERV31",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server8.txt"
+  },
+  {
+	"name": "HTTPSERV32",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server9.txt"
+  },
+  {
+	"name": "HTTPSERV33",
+	"group": 2,
+	"url": "http://ia601509.us.archive.org/5/items/dreamosat/free-server10.txt"
+  },
+  {
+	"name": "HTTPSERV34",
+	"group": 2,
+	"url": "http://cccamspot.com/spot/get.php"
+  },
+  {
+	"name": "HTTPSERV35",
+	"group": 2,
+	"url": "http://www.cccam24.de/free24/get.php/"
+  },
+  {
+	"name": "HTTPSERV36",
+	"group": 2,
+	"url": "https://cccamfree.tv/cccamfreetv/get.php"
+  },
+  {
+	"name": "HTTPSERV37",
+	"group": 2,
+	"url": "boss-cccam.com/Test.php"
+  },
+  {
+	"name": "HTTPSERV38",
+	"group": 2,
+	"url": "cccamgate.com/cccam-test.php"
+  },
+  {
+	"name": "HTTPSERV39",
+	"group": 2,
+	"url": "cccam-full.com/freecccam.php"
+  },
+  {
+	"name": "HTTPSERV40",
+	"group": 2,
+	"url": "https://cccam.ch/free/get.php"
+  },
+  {
+	"name": "HTTPSERV41",
+	"group": 2,
+	"url": "cccamgood.com/free/get2.php"
+  },
+  {
+	"name": "HTTPSERV42",
+	"group": 2,
+	"url": "free-cccam.com/freecccam/get.php"
+  },
+  {
+	"name": "HTTPSERV43",
+	"group": 2,
+	"url": "http://cccamstrong.com/freestrong/get.php"
+  },
+  {
+	"name": "HTTPSERV44",
+	"group": 2,
+	"url": "cccam-free.com/NEW/new0.php"
+  },
+  {
+	"name": "HTTPSERV45",
+	"group": 2,
+	"url": "http://cccam4you.net/free4you/get.php"
+  },
+  {
+	"name": "HTTPSERV46",
+	"group": 2,
+	"url": "freeccamserver.com/free/get2.php"
+  },
+  {
+	"name": "HTTPSERV47",
+	"group": 2,
+	"url": "https://cccamgenerators.com/generator/get.php"
+  },
+  {
+	"name": "HTTPSERV48",
+	"group": 2,
+	"url": "http://www.powercccam.net/free-server.php"
+  },
+  {
+	"name": "HTTPSERV49",
+	"group": 2,
+	"url": "https://www.topcamd.com/get1.php"
+  },
+  {
+	"name": "HTTPSERV50",
+	"group": 2,
+	"url": "https://www.topcamd.com/get2.php"
+  },
+  {
+	"name": "HTTPSERV51",
+	"group": 2,
+	"url": "https://www.topcamd.com/get3.php"
+  },
+  {
+	"name": "HTTPSERV52",
+	"group": 2,
+	"url": "https://www.topcamd.com/get4.php"
+  },
+  {
+	"name": "HTTPSERV53",
+	"group": 2,
+	"url": "http://cccamstore.tv/free-server.php"
+  },
+  {
+	"name": "HTTPSERV54",
+	"group": 2,
+	"url": "powerfullcccam.com/powerfull/get.php"
+  },
+  {
+	"name": "HTTPSERV55",
+	"group": 2,
+	"url": "mecccam.com/free-cccam.php"
+  },
+  {
+	"name": "HTTPSERV56",
+	"group": 2,
+	"url": "cccammania.com/free4/get2.php "
+  },
+  {
+	"name": "HTTPSERV57",
+	"group": 2,
+	"url": "http://www.cccamproviders.com/freeproviders/get.php"
+  },
+  {
+	"name": "HTTPSERV58",
+	"group": 2,
+	"url": "cccamgenerador.com/gratis/get2.php"
   }
 ]
