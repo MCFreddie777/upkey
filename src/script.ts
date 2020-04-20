@@ -133,6 +133,22 @@ const update = (printErrors: boolean = false) => {
                             function (error, stdout, stderr) {
                                 if (error) {
                                     console.error('[ERROR]:', error);
+
+                                    // Check the console if the error is caused by not existing reader - let's add in in that case
+                                    console.log('Adding the reader instead..');
+                                    exec(
+                                        `wget --spider --user ${stb.oscUsername} --password ${stb.oscPassword} "http://${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Add"`,
+                                        function (error, stdout, stderr) {
+                                            if (error) {
+                                                console.error(
+                                                    '[ERROR]:',
+                                                    error
+                                                );
+                                            } else if (stdout) {
+                                                console.log(stdout, '\n');
+                                            } else console.log(stderr, '\n');
+                                        }
+                                    );
                                 } else if (stdout) {
                                     console.log(stdout, '\n');
                                 } else console.log(stderr, '\n');
