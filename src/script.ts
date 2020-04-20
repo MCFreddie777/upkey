@@ -1,7 +1,22 @@
 import fs from 'fs';
-import { Server, Stb } from './types';
 import { exec } from 'child_process';
 import readline from 'readline';
+
+export interface Server {
+    name: string;
+    group: number;
+    url: string;
+    update: boolean;
+}
+
+export interface Stb {
+    ip: string;
+    port: number;
+    oscUsername: string;
+    oscPassword: string;
+    ftpUsername: string;
+    ftpPassword: string;
+}
 
 // Config
 const serversFilePath = 'servers.json';
