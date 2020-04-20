@@ -82,8 +82,16 @@ const update = (printErrors = false) => {
                     user: arr[3],
                     pass: arr[4],
                 };
-                console.log(`Request: http://${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save`);
-                return child_process_1.exec(`wget -q --spider --user ${stb.oscUsername} --password ${stb.oscPassword} "http://${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save"`);
+                return child_process_1.exec(`wget --spider --user ${stb.oscUsername} --password ${stb.oscPassword} "http://${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save"`, function (error, stdout, stderr) {
+                    if (error) {
+                        console.error('[ERROR]:', error);
+                    }
+                    else if (stdout) {
+                        console.log(stdout, '\n');
+                    }
+                    else
+                        console.log(stderr, '\n');
+                });
             }
             return;
         })
