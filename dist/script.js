@@ -82,12 +82,8 @@ const update = (printErrors = false) => {
                     user: arr[3],
                     pass: arr[4],
                 };
-                return axios_1.default
-                    .get(`//${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save"`)
-                    .catch((err) => {
-                    console.log(`Server: ${server.name}: ${err.code}`);
-                    console.error(err);
-                });
+                console.log(`Request: http://${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save`);
+                return child_process_1.exec(`wget -q --spider --user ${stb.oscUsername} --password ${stb.oscPassword} "http://${stb.ip}:${stb.port}/readerconfig.html?label=${server.name}&protocol=cccam&device=${key.ip}%2C${key.port}&group=${server.group}&services=skylink&services=upc&services=digi&services=skyuk&services=skyde&user=${key.user}&password=${key.pass}&cccversion=2.3.0&action=Save"`);
             }
             return;
         })
@@ -101,6 +97,11 @@ loadServer(serversFilePath);
 loadStb(stbFilePath);
 check(logFilePath);
 const requests = update(false);
-Promise.all(requests).then(() => {
-    console.log('Done.');
+Promise.all(requests)
+    .then(() => {
+    console.log(`Done. (${requests.length})`);
+})
+    .catch((err) => {
+    console.log('Something went wrong: ');
+    console.error(err);
 });
